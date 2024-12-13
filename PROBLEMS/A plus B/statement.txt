@@ -1,0 +1,12 @@
+Simply add A and B.
+
+# Constraints
+\(1 \leq T \leq 100\)
+\(2 \leq A \leq 1{,}000\)
+\(2 \leq B \leq 1{,}000\)
+
+# Input Format
+Input begins with an integer \(T\), the number of test cases. Each case is a single line containing the integers \(A\) and \(B\).
+
+# Output Format
+For the \(i\)th test case, print "`Case #i:` " followed by \(A + B\).

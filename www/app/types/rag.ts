@@ -1,0 +1,1 @@
+export type RAG_resource = {id: string, file_path: string, title: string, content: string}; 

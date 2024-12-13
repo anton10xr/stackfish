@@ -1,0 +1,35 @@
+*This problem shares some similarities with problem A2, with key differences in bold.*
+
+Monty the mountain cottontail rabbit is preparing for an expedition in the Rockies. However, Monty is a mathematician first and a mountaineer second, and would like to first assess his route in terms of numbers.
+
+A number is a "**peak**" if the following criteria are met:
+* it has \(2k + 1\) digits, $D_1 ... D_{2k+1}$, for some integer $k \ge 0$
+* none of its digits are zero
+* the first $k+1$ digits **go up by** $1$
+  * $D_{i+1} = D_i + 1$ for $1 \le i \lt k+1 $
+* the last $k+1$ digits **go down by** $1$ 
+  * $D_{i+1} = D_i - 1$ for $k+1 \le i \lt 2k+1 $
+
+Example of peaks are $121$, $12321$, $232$, and $67876$, but not $131$ or $1232$.
+
+Given an inclusive range $[A, B]$ and an integer $M$, help Monty count the number of peaks in the range that are a multiple of $M$.
+
+# Constraints
+\(1 \leq T \leq 100\)
+\(0 \leq A \leq B \leq 10^{18}\)
+\(1 \leq M \leq 10^{9}\)
+
+# Input Format
+Input begins with an integer \(T\), the number of test cases. Each case is a single line with the integers $A$, $B$, and $M$.
+
+# Output Format
+For the \(i\)th test case, print "`Case #i:` " followed by the number of peaks in the range $[A, B]$ that are a multiple of $M$.
+
+# Sample Explanation
+In the first case, the only number in the range $[121, 121]$ is $121$, which is both a peak and a multiple of $11$.
+
+In the second case, the peaks in the range $[0, 100]$ are the single-digit numbers $1$ through $9$, of which $4$ are multiples of $2$.
+
+In the third case, the peaks in the range $[0, 132]$ are the single-digit numbers $1$ through $9$, as well as $121$.
+
+In the sixth case, $22322$ is not a peak.

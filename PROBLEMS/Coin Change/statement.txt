@@ -1,0 +1,25 @@
+You found a magic coin exchange machine which takes dollar bills and randomly dispenses coins among $N$ different denominations. As an avid coin collector with a stack of old dollar bills, you'd like to try to obtain at least one copy of each coin denomination.
+
+If you insert $1$ dollar bill, you'll get a random coin (with $1/N$ probability of getting any specific denomination). However, you can spend more in each exchange to increase the chance of getting a new denomination you don't have. 
+
+If you simultaneously insert $D$ dollar bills, you’ll get a $\min((D - 1) \cdot P, 100)$ percent chance of receiving a coin denomination you don’t yet have, and a $100 - \min((D - 1) \cdot P, 100)$ percent chance of receiving a random coin.
+
+If you optimally choose how many dollar bills to insert in each exchange, how many dollar bills will it take, on average, to collect one copy of every coin?
+
+Your answer will be accepted if it has a relative error of at most $10^{-6}$.
+
+# Constraints
+\(1 \leq T \leq 60\)
+\(1 \leq N \leq 10^{15}\)
+\(0 \leq P \leq 100\)
+
+# Input Format
+Input begins with an integer \(T\), the number of test cases. Each case is a single line with the integers $N$ and $P$.
+
+# Output Format
+For the \(i\)th test case, print "`Case #i:` " followed by the expected number of dollar bills you'll spend before getting at least one copy of each coin denomination, if you exchange optimally.
+
+# Sample Explanation
+In the first case, you can't spend additional bills for any better chances of a new coin, so you'll just spend $1$ bill each time. You always get a new coin for your first bill. The expected number of bills you'll spend to get your second coin is $1 \cdot \frac{2}{3} + 2 \cdot \frac{1}{3} \cdot \frac{2}{3} + 3 \cdot (\frac{1}{3}^2) \cdot \frac{2}{3}... = \frac{3}{2}$. For the third coin you'll spend $1 \cdot \frac{1}{3} + 2 \cdot \frac{2}{3} \cdot \frac{1}{3} + 3 \cdot (\frac{2}{3}^2) \cdot \frac{1}{3} + ... = 3$. In total, that's $1 + \frac{3}{2} + 3 = 5.5$ bills on average.
+
+In the second case, your best strategy is to repeatedly spend $1$ bill until you have $2$ coins, and then spend $2$ bills to guarantee your third coin. You'll spend $1 + \frac{3}{2} + 2 = 4.5$ bills on average.

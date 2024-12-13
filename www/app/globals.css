@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 214, 219, 220;
+  --background-rgb: 28, 43, 52;
+  --accent-primary: 59, 130, 246;    /* Blue accent */
+  --accent-secondary: 139, 92, 246;   /* Purple accent */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
